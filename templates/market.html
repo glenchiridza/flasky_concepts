@@ -13,7 +13,9 @@
 <h1>Market Items</h1>
 
 <ul>
-    <li>{{item_name}}</li>
+    {% for item in items %}
+    <li>{{item.id}}| {{item.name}} | {{item.price}}</li>
+    {% endfor %}
 </ul>
 
 
