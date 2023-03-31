@@ -3,7 +3,7 @@ from flask_login import UserMixin
 
 
 # so that our system knows our identity in every page session
-# it should be able to load user using loader manager
+# it should be able to load user using login manager
 
 @login_manager.user_loader
 def load_user(user_id):
