@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flasky Market place</title>
+</head>
+<body>
+
+<!--display errors, though it should be placed in base html so it can be reusable-->
+<!--with is used when accessing resources that are not managed or file systems.-->
+<!--it makes sure a resource is cleaned up even if there are exceptions-->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}} ">
+                <p>{{message}}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<h1>Login</h1>
+<form method="post" >
+
+    {{form.hidden_tag()}}
+
+    {{form.username.label()}}
+    {{form.username(class='form-control',placeholder='enter username')}}
+
+<br/>
+     {{form.password1.label()}}
+    {{form.password1()}}
+
+<br/>
+
+    {{form.submit()}}
+
+</form>
+
+</body>
+</html>
