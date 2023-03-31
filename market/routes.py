@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, flash
-from flask_login import login_user
+from flask_login import login_user,logout_user
 
 from market import app
 from market.models import Item, User
@@ -54,3 +54,9 @@ def login_page():
             flash("username or password is incorrect!!!",category='danger')
         return redirect(url_for('market_page'))
     return render_template('login.html', form=form)
+
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    flash("you are now logged out",category='info')
