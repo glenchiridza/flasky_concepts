@@ -5,6 +5,9 @@
     <title>Flasky Market place</title>
 </head>
 <body>
+{% if current_user.is_authenticated %}
+    {{current_user.username.title()}} Your Budget: ${{current_user.prettier_budget}}
+{% endif %}
 
 <h1>Welcome to the Market</h1>
 
