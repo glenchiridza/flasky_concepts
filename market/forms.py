@@ -10,7 +10,7 @@ class RegisterForm(FlaskForm):
         if user:
             raise ValidationError('Username already exists, try another username')
 
-    def validate_email_address(self,email_to_check):
+    def validate_email_address(self, email_to_check):
         email = User.query.filter_by(email=email_to_check.data).first()
         if email:
             raise ValidationError('Email already taken!!!')
@@ -24,6 +24,14 @@ class RegisterForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    username = StringField(label='Username',validators=[DataRequired()])
-    password = PasswordField(label='Password',validators=[DataRequired()])
+    username = StringField(label='Username', validators=[DataRequired()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
     submit = SubmitField(label='SignIn')
+
+
+class PurchaseForm(FlaskForm):
+    submit = SubmitField(label='Purchase Item')
+
+
+class SellItemForm(FlaskForm):
+    submit = SubmitField(label='Sell Item')

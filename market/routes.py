@@ -31,6 +31,8 @@ def register_page():
         )
         db.session.add(user_to_create)
         db.session.commit()
+        login_user(user_to_create)
+        flash(f'Account created successfully! You are now logged in as: {user_to_create.username} ',category='success')
         return redirect(url_for('market_page'))
     if form.errors != {}:
         for err_msg in form.errors.values():
@@ -62,3 +64,6 @@ def logout():
     logout_user()
     flash("you are now logged out",category='info')
     return redirect(url_for('home_page'))
+
+
+# 5:19
