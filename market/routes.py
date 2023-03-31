@@ -60,3 +60,4 @@ def login_page():
 def logout():
     logout_user()
     flash("you are now logged out",category='info')
+    return redirect(url_for('home_page'))
