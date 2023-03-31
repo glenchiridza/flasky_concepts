@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flasky Market place</title>
+</head>
+<body>
+
+<h1>Registration</h1>
+<form method="post" >
+
+    {{form.hidden_tag()}}
+
+    {{form.username.label()}}
+    {{form.username(class='form-control',placeholder='enter username')}}
+<br/>
+    {{form.email_address.label()}}
+    {{form.email_address(placeholder='email address')}}
+<br/>
+     {{form.password1.label()}}
+    {{form.password1()}}
+<br/>
+     {{form.password2.label()}}
+    {{form.password2()}}
+<br/>
+
+    {{form.submit()}}
+
+</form>
+
+</body>
+</html>

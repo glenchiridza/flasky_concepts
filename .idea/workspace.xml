@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87a6d03a-b941-4f5d-a388-ab37553c55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/market.db" beforeDir="false" afterPath="$PROJECT_DIR$/market/market.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +36,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/market/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/market/templates" />
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/market" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -85,6 +90,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state width="683" height="168" key="GridCell.Tab.0.bottom" timestamp="1680264045678">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="683" height="168" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1680264045678" />
+    <state width="683" height="168" key="GridCell.Tab.0.center" timestamp="1680264045678">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="683" height="168" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1680264045678" />
+    <state width="683" height="168" key="GridCell.Tab.0.left" timestamp="1680264045677">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="683" height="168" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1680264045677" />
+    <state width="683" height="168" key="GridCell.Tab.0.right" timestamp="1680264045678">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="683" height="168" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1680264045678" />
     <state x="679" y="221" key="com.intellij.ide.util.TipDialog" timestamp="1680261740631">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
