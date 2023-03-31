@@ -9,7 +9,7 @@
 <!--display errors, though it should be placed in base html so it can be reusable-->
 <!--with is used when accessing resources that are not managed or file systems.-->
 <!--it makes sure a resource is cleaned up even if there are exceptions-->
-{% with messages = get_flashed_messages(with_category=true) %}
+{% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
         {% for category, message in messages %}
             <div class="alert alert-{{category}} ">
