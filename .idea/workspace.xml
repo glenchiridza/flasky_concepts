@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87a6d03a-b941-4f5d-a388-ab37553c55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/market.db" beforeDir="false" afterPath="$PROJECT_DIR$/market/market.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/market/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
