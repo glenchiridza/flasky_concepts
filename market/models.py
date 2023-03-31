@@ -1,7 +1,16 @@
-from market import db, bcrypt
+from market import db, bcrypt, login_manager
+from flask_login import UserMixin
 
 
-class User(db.Model):
+# so that our system knows our identity in every page session
+# it should be able to load user using loader manager
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+
+class User(UserMixin,db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(length=30), nullable=False, unique=True)
     email = db.Column(db.String(length=50), nullable=False, unique=True)
@@ -19,6 +28,10 @@ class User(db.Model):
 
     def __repr__(self):
         return self.username
+
+    def check_password_correction(self, attempted_password):
+        # it returns either true or false
+        return bcrypt.check_password_hash(self.password_hash, attempted_password)
 
 
 class Item(db.Model):
