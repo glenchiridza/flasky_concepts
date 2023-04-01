@@ -33,6 +33,25 @@
             <input id="purchased_item" name="purchased_item" type="hidden" value="{{item.name}}">
             {{purchase_form.submit()}}
         </form>
+
+
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+<h1>My Items</h1>
+<ul>
+    {% for item in my_items %}
+    <li>{{item.id}}| {{item.name}} | {{item.price}}
+        <form method="post">
+            {{selling_form.hidden_tag()}}
+            <input id="sold_item" name="sold_item" type="hidden" value="{{item.name}}">
+            {{selling_form.submit()}}
+        </form>
+
+
     </li>
     {% endfor %}
 </ul>
