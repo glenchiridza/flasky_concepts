@@ -19,7 +19,9 @@
     {% for item in items %}
     <li>{{item.id}}| {{item.name}} | {{item.price}}
         <form method="post">
-
+            {{purchase_form.hidden_tag()}}
+            <input id="purchased_item" name="purchased_item" type="hidden" value="{{item.name}}">
+            {{purchase_form.submit()}}
         </form>
     </li>
     {% endfor %}
