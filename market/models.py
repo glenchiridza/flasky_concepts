@@ -10,7 +10,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-class User(db.Model,UserMixin):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(length=30), nullable=False, unique=True)
     email = db.Column(db.String(length=50), nullable=False, unique=True)
@@ -40,6 +40,9 @@ class User(db.Model,UserMixin):
         # it returns either true or false
         return bcrypt.check_password_hash(self.password_hash, attempted_password)
 
+    def can_purchase(self, item_object):
+        return self.budget >= item_object.price
+
 
 class Item(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
@@ -52,4 +55,7 @@ class Item(db.Model):
     def __repr__(self):
         return self.name
 
-# ended at 2:10
+    def buy(self, user):
+        self.owner = user.id
+        user.budget -= self.price
+        sv.session.commit()

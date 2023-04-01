@@ -5,6 +5,16 @@
     <title>Flasky Market place</title>
 </head>
 <body>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}} ">
+                <p>{{message}}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
 {% if current_user.is_authenticated %}
     {{current_user.username.title()}} Your Budget: ${{current_user.prettier_budget}}
 {% endif %}

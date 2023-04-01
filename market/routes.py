@@ -17,15 +17,17 @@ def home_page():
 @login_required
 def market_page():
     purchase_form = PurchaseForm()
-    if purchase_form.validate_on_submit():
-        if request.method == "POST":
-            purchase_item = request.form.get('purchased_item')
-            p_item_object = Item.query.filter_by(name=purchase_item).first()
-            if p_item_object:
-                p_item_object.owner = current_user.id
-                current_user.budget -= p_item_object.price
-                db.session.commit()
-                flash(f"You have purchased: {p_item_object.name}","success")
+    if request.method == "POST":
+        purchase_item = request.form.get('purchased_item')
+        p_item_object = Item.query.filter_by(name=purchase_item).first()
+        if p_item_object:
+            if current_user.can_purchase(p_item_object):
+                p_item_object.buy(current_user)
+                flash(f"You have purchased: {p_item_object.name}",category="success")
+            else:
+                flash("You have not enough funds to make purchase",category="danger")
+        return redirect(url_for('market_page'))
+
     if request.method == "GET":
         items = Item.query.filter_by(owner=None)
         return render_template('market.html', items=items,purchase_form=purchase_form)
